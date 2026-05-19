@@ -236,7 +236,8 @@ button:active {
 .secret {
   display: none;
   margin-top: 16px;
-  background: #fff0a6;
+  background: rgba(255, 240, 166, 0.68);
+  backdrop-filter: blur(3px);
   text-align: center;
 }
 
@@ -277,8 +278,8 @@ button:active {
 
 .hero-flower {
   width: 82px;
-  right: 16px;
-  bottom: 88px;
+  right: 22px;
+  bottom: 180px;
   transform: rotate(9deg);
   z-index: 4;
   opacity: 0.92;
@@ -700,7 +701,7 @@ button:active {
   .hero-flower {
     width: 70px;
     right: 18px;
-    bottom: 84px;
+    bottom: 155px;
     opacity: 0.85;
   }
 
