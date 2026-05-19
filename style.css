@@ -479,8 +479,8 @@ button:active {
 }
 
 .letter-section {
-  min-height: 650px;
-  padding-bottom: 80px;
+  min-height: 760px;
+  padding-bottom: 130px;
 }
 
 .letter {
@@ -498,11 +498,12 @@ button:active {
 
 .monkey-box {
   position: relative;
-  margin-top: 36px;
+  margin-top: 18px;
   min-height: 230px;
   display: none;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  padding-bottom: 35px;
 }
 
 .monkey-box.show {
@@ -511,12 +512,11 @@ button:active {
 }
 
 .letter-monkey {
-  width: 205px;
+  width: 175px;
   transform: rotate(-5deg);
   animation: monkeyBounce 0.7s ease;
   z-index: 12;
 }
-
 .boom {
   position: absolute;
   top: 20px;
@@ -779,13 +779,14 @@ button:active {
   }
 
   .letter-monkey {
-    width: 180px;
-  }
+  width: 155px;
+}
 
-  .monkey-box {
-    min-height: 220px;
-    margin-top: 30px;
-  }
+.monkey-box {
+  min-height: 210px;
+  margin-top: 18px;
+  padding-bottom: 45px;
+}
 
   .boom {
     top: 18px;
