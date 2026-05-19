@@ -1,16 +1,27 @@
 const loveButton = document.getElementById("loveButton");
 const message = document.getElementById("message");
+const letterMonkey = document.getElementById("letterMonkey");
 
 loveButton.addEventListener("click", () => {
   message.classList.toggle("show");
+  letterMonkey.classList.toggle("show");
   makeHeart();
 });
 
 const surpriseBtn = document.getElementById("surpriseBtn");
 const surpriseText = document.getElementById("surpriseText");
+const heroMonkey = document.getElementById("heroMonkey");
+const boomEffect = document.getElementById("boomEffect");
 
 surpriseBtn.addEventListener("click", () => {
   surpriseText.classList.toggle("show");
+  heroMonkey.classList.toggle("show");
+  boomEffect.classList.remove("show");
+
+  setTimeout(() => {
+    boomEffect.classList.add("show");
+  }, 10);
+
   makeHeart();
 });
 
