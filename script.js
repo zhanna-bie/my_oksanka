@@ -4,16 +4,21 @@ const monkeyBox = document.getElementById("monkeyBox");
 
 loveButton.addEventListener("click", () => {
   message.classList.toggle("show");
-  monkeyBox.classList.toggle("show");
+  monkeyWrap.classList.toggle("show-monkey");
+
   makeHeart();
 
-  if (monkeyBox.classList.contains("show")) {
+  if (monkeyWrap.classList.contains("show-monkey")) {
+
     setTimeout(() => {
-      monkeyBox.scrollIntoView({
+
+      monkeyWrap.scrollIntoView({
         behavior: "smooth",
         block: "center"
       });
-    }, 250);
+
+    }, 300);
+
   }
 });
 
