@@ -319,36 +319,78 @@ button:active {
 .sticker,
 .film-decor,
 .fun-sticker,
-.letter-flowers {
+.letter-sticker {
   position: absolute;
   z-index: 5;
   pointer-events: none;
 }
 
-.flower1 {
-  width: 120px;
-  top: 60px;
-  right: -18px;
+.hero-arrow {
+  width: 86px;
+  right: 18px;
+  top: 70px;
+  opacity: 0.75;
 }
 
-.bow1 {
-  width: 90px;
-  top: 115px;
-  left: 10px;
+.hero-doodle {
+  width: 88px;
+  left: 14px;
+  top: 72px;
 }
 
-.star1 {
+.hero-sparkle {
+  width: 92px;
+  right: -22px;
+  top: 260px;
+}
+
+.hero-star {
   width: 58px;
-  bottom: 155px;
-  right: 26px;
+  right: 34px;
+  bottom: 130px;
 }
 
 .flowers-hero {
-  width: 105px;
-  right: 22px;
-  top: 445px;
+  width: 135px;
+  right: -12px;
+  top: 625px;
   transform: rotate(10deg);
-  z-index: 6;
+  z-index: 8;
+}
+
+.hero-monkey {
+  width: 120px;
+  right: 6px;
+  bottom: 40px;
+  opacity: 0;
+  transform: translateY(35px) scale(0.5) rotate(-20deg);
+  transition: 0.45s ease;
+  z-index: 12;
+}
+
+.hero-monkey.show {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(7deg);
+  animation: monkeyBounce 0.65s ease;
+}
+
+.boom {
+  position: absolute;
+  right: 88px;
+  bottom: 148px;
+  background: #fff0a6;
+  border: 3px solid #111;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 18px;
+  opacity: 0;
+  transform: scale(0.4) rotate(-15deg);
+  z-index: 15;
+  pointer-events: none;
+}
+
+.boom.show {
+  animation: boomPop 0.7s ease forwards;
 }
 
 .film-scene {
@@ -441,9 +483,15 @@ button:active {
   top: 365px;
 }
 
+.decor5 {
+  width: 70px;
+  right: 38px;
+  top: 520px;
+}
+
 .funny-scene {
   position: relative;
-  min-height: 520px;
+  min-height: 650px;
 }
 
 .arrow-note {
@@ -527,33 +575,111 @@ button:active {
   font-size: 15px;
 }
 
+.fun-arrow {
+  width: 90px;
+  right: -18px;
+  top: -42px;
+  opacity: 0.75;
+}
+
+.fun-sparkle {
+  width: 92px;
+  right: -10px;
+  top: 82px;
+}
+
 .fun-flower {
   width: 125px;
-  right: -24px;
-  top: -58px;
+  right: 0;
+  bottom: 12px;
 }
 
 .fun-ticket {
   width: 135px;
-  left: 24px;
-  bottom: -70px;
+  left: 6px;
+  bottom: 5px;
 }
 
-.fun-small {
-  width: 105px;
-  right: 12px;
-  bottom: -50px;
+.fun-doodle {
+  width: 115px;
+  left: 120px;
+  bottom: -18px;
 }
 
 .letter-section {
-  min-height: 560px;
+  min-height: 760px;
+}
+
+.letter {
+  padding-right: 135px;
+  min-height: 250px;
 }
 
 .letter-flowers {
-  width: 135px;
-  right: -18px;
-  top: 52px;
+  width: 118px;
+  right: 18px;
+  top: 135px;
   transform: rotate(-12deg);
+  z-index: 9;
+}
+
+.letter-cassette {
+  width: 120px;
+  left: 32px;
+  top: 430px;
+}
+
+.letter-star {
+  width: 70px;
+  right: 28px;
+  top: 390px;
+}
+
+.letter-wax {
+  width: 115px;
+  right: -12px;
+  bottom: 80px;
+}
+
+.letter-monkey {
+  width: 130px;
+  right: 18px;
+  bottom: 210px;
+  opacity: 0;
+  transform: translateY(35px) scale(0.4) rotate(10deg);
+  transition: 0.45s ease;
+  z-index: 12;
+}
+
+.letter-monkey.show {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(-6deg);
+  animation: monkeyBounce 0.65s ease;
+}
+
+.letter-bottom-note {
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  bottom: 40px;
+  background: rgba(255, 240, 166, 0.95);
+  border: 3px solid #111;
+  border-radius: 26px;
+  padding: 14px 16px;
+  box-shadow: 7px 8px 0 rgba(0,0,0,.14);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: rotate(-2deg);
+}
+
+.letter-bottom-note img {
+  width: 58px;
+}
+
+.letter-bottom-note span {
+  font-size: 15px;
+  line-height: 1.25;
 }
 
 .letter p {
@@ -639,5 +765,36 @@ button:active {
   to {
     transform: translateY(-90px) scale(1.6) rotate(20deg);
     opacity: 0;
+  }
+}
+
+@keyframes monkeyBounce {
+  0% {
+    transform: translateY(40px) scale(0.4) rotate(-20deg);
+  }
+
+  60% {
+    transform: translateY(-10px) scale(1.08) rotate(8deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes boomPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.25) rotate(8deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.7) rotate(18deg);
   }
 }
