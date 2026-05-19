@@ -33,22 +33,22 @@ const funnyPhotos = [
   {
     image: "images/film5.jpg",
     title: "коли ти дуже serious girl",
-    caption: "тут буде смішний підпис"
+    caption: "мені це подобається"
   },
   {
     image: "images/film6.jpg",
     title: "коли ти дуже мила",
-    caption: "тут буде милий підпис"
+    caption: "з'являється посмішка"
   },
   {
     image: "images/film7.jpg",
     title: "коли ти дуже смішна",
-    caption: "тут буде наш локальний жарт"
+    caption: "стає спокійно на душі"
   },
   {
     image: "images/film8.jpg",
-    title: "коли ти вредна, але моя",
-    caption: "тут буде ще один підпис"
+    title: "коли ти вредна",
+    caption: "ти все рівно моя найкраща"
   }
 ];
 
